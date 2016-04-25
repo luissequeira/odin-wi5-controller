@@ -124,7 +124,7 @@ class OdinAgentProtocolServer implements Runnable {
             		             matchingIds.put(Long.parseLong(fields[3 + i].split(":")[0]),
             				     Long.parseLong(fields[3 + i].split(":")[1]));
             	       }
-
+                       //log.info("PUBLISH message " + msg);
             	       receivePublish(MACAddress.valueOf(staAddress), odinAgentAddr, matchingIds);
 
                 }else if(msg_type.equals(ODIN_MSG_DEAUTH)){

@@ -299,6 +299,9 @@ public class OdinMaster implements IFloodlightModule, IOFSwitchListener, IOdinMa
 			NotificationCallbackContext cntx = new NotificationCallbackContext(clientHwAddress, oa, entry.getValue());
 
 			tup.cb.exec(tup.oes, cntx);
+			
+			//Wi5: We should include this into a level of debug 
+			log.info("PUBLISH msg from " + oa + ": " + tup.oes.getClient() + "," + tup.oes.getStatistic() + "," + tup.oes.getRelation() + "," + tup.oes.getValue());
 		}
 	}
 
