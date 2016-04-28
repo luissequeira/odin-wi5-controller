@@ -244,11 +244,8 @@ public class OdinMaster implements IFloodlightModule, IOFSwitchListener, IOdinMa
 		    	assert (lvap != null);
 
 				if (lvap.getAgent() == null) {
-					// client is connecting for the
-					// first time, had explicitly
-					// disconnected, or knocked
-					// out at as a result of an agent
-					// failure.
+					// client is connecting for the first time, had explicitly
+					// disconnected, or knocked out at as a result of an agent failure.
 
 					// Use global pool for first time connections
 					handoffClientToApInternal(PoolManager.GLOBAL_POOL, clientHwAddress, odinAgentAddr);
