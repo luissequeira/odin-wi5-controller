@@ -27,7 +27,7 @@ public class LvapManager {
 		OFFlowMod flow1 = new OFFlowMod();
 		{
 			OFMatch match = new OFMatch();
-			match.fromString("in_port=2,dl_type=0x0800,nw_src=" + inetAddr.getHostAddress());
+			match.fromString("in_port=3,dl_type=0x0800,nw_src=" + inetAddr.getHostAddress());
 			
 			OFActionOutput actionOutput = new OFActionOutput ();
 			actionOutput.setPort((short) 1);
@@ -51,7 +51,7 @@ public class LvapManager {
 			match.fromString("in_port=1,dl_type=0x0800,nw_dst=" + inetAddr.getHostAddress());
 			
 			OFActionOutput actionOutput = new OFActionOutput ();
-			actionOutput.setPort((short) 2);
+			actionOutput.setPort((short) 3);
 			actionOutput.setLength((short) OFActionOutput.MINIMUM_LENGTH);
 			
 			List<OFAction> actionList = new ArrayList<OFAction>();
