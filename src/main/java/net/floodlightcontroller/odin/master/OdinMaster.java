@@ -997,14 +997,14 @@ public class OdinMaster implements IFloodlightModule, IOFSwitchListener, IOdinMa
 
         			log.info("Updating client: " + clientHwAddr + " with ipAddr: " + yourIp);
         			oc.setIpAddress(yourIp);
-        		/*	oc.getLvap().setOFMessageList(lvapManager.getDefaultOFModList(yourIp));
+        			oc.getLvap().setOFMessageList(lvapManager.getDefaultOFModList(yourIp));
 
         			// Push flow messages associated with the client
         			try {
         				oc.getLvap().getAgent().getSwitch().write(oc.getLvap().getOFMessageList(), null);
         			} catch (IOException e) {
         				log.error("Failed to update switch's flow tables " + oc.getLvap().getAgent().getSwitch());
-        			}*/
+        			}
         			oc.getLvap().getAgent().updateClientLvap(oc);
         		}
 

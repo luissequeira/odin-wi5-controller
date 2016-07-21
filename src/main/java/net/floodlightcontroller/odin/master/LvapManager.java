@@ -68,8 +68,8 @@ public class LvapManager {
 	
 		ArrayList<OFMessage> list = new ArrayList<OFMessage>();
 		
-//		list.add(flow1);
-//		list.add(flow2);
+		list.add(flow1);
+		list.add(flow2);
 		
 		return list;
 	}
