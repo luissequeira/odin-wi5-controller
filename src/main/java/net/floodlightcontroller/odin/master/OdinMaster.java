@@ -794,6 +794,7 @@ public class OdinMaster implements IFloodlightModule, IOFSwitchListener, IOdinMa
 
 				for (int i = 1; i < fields.length; i++) {
 					poolManager.addPoolForAgent(InetAddress.getByName(fields[i]), poolName);
+					log.info("[ODIN] Agent avaliable with IP... " + fields[i]);
 				}
 
 				// NETWORKS
